@@ -1,0 +1,35 @@
+﻿
+@model IEnumerable<Spellenwinkel.Models.Games>
+
+
+@{
+ViewData["Title"] = "Home Page";
+}
+<div class="welcome">
+    <img src="~/img/sh_logo.svg">
+    <img id="scrolldown" src="~/img/scrolldown.svg">
+</div>
+
+
+<div class="container" id="site-container">
+    <div class="grid-container">
+        <div class="Filter-area"></div>
+        <div class="Content">
+            <!-- iterates trough all the game items and creates a css grid item -->
+            @foreach(var item in Model)
+            {
+                <div>
+                    <img src="@item.Image" width="256px" height="256px"><br>
+                    <strong>
+                    @item.Name
+                    </strong><p>
+                    <span>@item.Price<p>
+                    Aantal spelers: @item.MinPlayers tot @item.MaxPlayers spelers<p>
+                    Type: @item.Type <p>
+                    Tijdsduur: @item.Duration Minuten
+                    </span>
+                </div>
+            }
+        </div>
+    </div>
+</div>

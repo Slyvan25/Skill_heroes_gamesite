@@ -1,0 +1,118 @@
+﻿@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  overflow-x: hidden;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+nav>ul {
+  display: flex;
+  justify-content: space-evenly;
+  width: 30vw;
+  list-style: none;
+}
+
+nav>ul>li>a {
+  color: #ffffff;
+}
+
+header {
+  position: absolute;
+  z-index: 102;
+  width: 100vw;
+}
+
+banner {
+  display: flex;
+  position: relative;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  background: url("../img/background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
+}
+
+banner-overlay {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 175, 238, 0.6);
+  z-index: 101;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+.title {
+  text-transform: uppercase;
+  color: #ffffff;
+  font-weight: bolder;
+  font-size: 1.5em;
+  line-height: 2;
+  margin-left: 1em;
+}
+
+.welcome
+{
+  position: relative;
+  display:  flex;
+  flex-direction: column;
+  height: 90vh;
+}
+
+.welcome > img
+{
+  flex: 10;
+}
+#scrolldown
+{
+  width: 86px;
+  height: 86px;
+  align-self: center;
+  flex: 1;
+}
+
+
+.container
+{
+  clip-path: polygon(0% 100%, 0% 4%, 3% 0%, 97% 0%, 100% 4%, 100% 100%);
+  background-color: #fff;
+  color: #231f20;
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  height: 90vh;
+  left: 0;
+  transform: translateY(100%);
+  transition: transform .5s;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 0.4fr 1.6fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: "Filter-area Content" "Filter-area Content" "Filter-area Content";
+}
+
+.Filter-area { grid-area: Filter-area; }
+
+.Content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: ". ." ". ." ". .";
+  grid-area: Content;
+}

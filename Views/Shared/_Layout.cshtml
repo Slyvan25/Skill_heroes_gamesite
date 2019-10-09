@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Spellenwinkel</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <header>
+        <nav>
+            <span class="title">spellen<span style="color:#231f20;">boot</span></span>
+            <ul>
+                <li>
+                    <a area="" asp-controller="Home" asp-action="Home">Home</a>
+                </li>
+                <li>
+                    <a area="" asp-controller="Home" asp-action="games">Spellen</a>
+                </li>
+                <li>
+                    <a area="" asp-controller="Home" asp-action="about">Over</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <banner >
+       <partial name="_CookieConsentPartial" />
+        <banner-overlay id="banner">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+        </banner-overlay>
+
+    </banner>
+    <br>
+
+  <footer class="border-top footer text-muted">
+        <!-- <div class="container">
+            &copy; 2019 - Spellenwinkel - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div> -->
+    </footer>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
